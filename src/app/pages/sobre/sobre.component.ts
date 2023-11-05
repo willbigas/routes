@@ -20,7 +20,7 @@ export class SobreComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // Parâmetros de URL
+    // Parâmetros de URL ----- abc.com/:algo/:algo2
     this.activatedRoute.params.subscribe(params => {
       this.id = params['id'];
       this.username = params['username'];
@@ -28,7 +28,7 @@ export class SobreComponent implements OnInit {
     });
 
 
-    // Query Params
+    // Query Params ---- abc.com/?algo=valor&algo2=valor2
     this.activatedRoute.queryParams.subscribe(queryParams => {
       this.nome = queryParams['nome'];
       this.sobrenome = queryParams['sobrenome'];
