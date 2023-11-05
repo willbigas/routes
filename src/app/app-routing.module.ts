@@ -7,6 +7,7 @@ import {PageErrorComponent} from "./pages/page-error/page-error.component";
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: "full"},
   {path: 'sobre', component: SobreComponent, children: [{path: 'bigas', component: SobreComponent}]},
+  {path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)},
   {path: '404', component: PageErrorComponent},
   {path: '**', redirectTo: '404'}
 ];
